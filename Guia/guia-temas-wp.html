@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+    <title>Temas para Worpress</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Temas para Wordpress con Bootstrap</h1>
+      <hr>
+      <div>
+          <h2>Creando template con Bootstrap</h2>
+          <ol>              
+              <li>
+                  Para crear el menu vamos a la documentación de Bootstrap en la seccion componentes>nav
+                y copiamos la plantilla base
+              </li>
+                  <li>
+                  	Abrimos el archivo HTML y creamos un div contenedor con la
+                  	clase (container-fluid), dentro de este pegamos la plantilla base y cambiamos el color del menu
+                  	usando la clase (navbar-dark bg-dark tambien aplicamos la clase (bg-dark) al div contenedor
+                  </li>
+                  <li>
+                      eliminamos el buscar y a los li les quitamos la clase del estilo (disabled) y copiamos los li
+                      hasta tener 4 items simples,
+                  </li>
+                  <li>Para que los items li se alinien a la derecha cambiamos la clase del ul asi (ms-auto por me-auto)</li>
+                  <li>Agregamos la imagen en dentro de la etiqueta de enlace (a)</li>
+          </ol>
+          <p>A continuacion la imagen del codigo citando algunos de los items anteriores</p>
+          <figure><img src="images/nav.png" alt="" width="900"></figure>
+
+        
+      </div>
+
+
+      <div>
+        <h2>Pagina estatica HTML Inicial</h2>
+        <p>Iniciamos con 3 paginas estaticas creadas con HTML y Bootstrap, estas estaran enlazadas entre si, estas luego se modificaran para crear el tema</p>
+        <ul>
+          <li><strong>index.html: </strong> Página principal</li>
+          <li><strong>single.html:</strong> Página de entradas</li>
+          <li>
+            <strong>page.html: </strong> Página de destino de los items del menú
+          </li>
+        </ul>
+        <figure><img src="images/start.png" alt="" width="800"></figure>
+        <p>Convertimos el archivo index.html en index.php el cual a su vez se divide en 3 archivos header, entradas y footer</p>
+        <figure><img src="images/html-to-php.png" alt="" width="800"></figure>
+        
+      </div>
+    </div>
+  </body>
+</html>
