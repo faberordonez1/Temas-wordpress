@@ -15,28 +15,58 @@
   <body>
     <div class="container">
       <h1>Temas para Wordpress con Bootstrap</h1>
+      <a href="https://developer.wordpress.org">Documentación</a>
       <hr>
       <div>
-          <h2>Creando template con Bootstrap</h2>
-          <ol>              
-              <li>
-                  Para crear el menu vamos a la documentación de Bootstrap en la seccion componentes>nav
-                y copiamos la plantilla base
+          <h2>Creando pagina estatica con Bootstrap</h2>
+          <div>
+            <h3>Nav</h3>
+            <ol>
+                <li>
+                    Para crear el menu vamos a la documentación de Bootstrap en la seccion componentes>nav
+                  y copiamos la plantilla base
+                </li>
+                    <li>
+                      Abrimos el archivo HTML y creamos un div contenedor con la
+                      clase (container-fluid), dentro de este pegamos la plantilla base y cambiamos el color del menu
+                      usando la clase (navbar-dark bg-dark tambien aplicamos la clase (bg-dark) al div contenedor
+                    </li>
+                    <li>
+                        eliminamos el buscar y a los li les quitamos la clase del estilo (disabled) y copiamos los li
+                        hasta tener 4 items simples,
+                    </li>
+                    <li>Para que los items li se alinien a la derecha cambiamos la clase del ul asi (ms-auto por me-auto)</li>
+                    <li>Agregamos la imagen en dentro de la etiqueta de enlace (a)</li>
+            </ol>
+            <p>A continuacion la imagen del codigo citando algunos de los items anteriores</p>
+            <figure><img src="images/nav.png" alt="" width="900"></figure>
+          </div> <!-- End Nav-->
+
+          <div>
+            <h3>Formulario</h3>
+            <h4>Titulo</h4>
+            <ol>
+              <li>Crear div contenedor con la clase container fluid</li>
+              <li>Enlazar el archivo style.css</li>
+              <li>Creamos otro div interno con la clase text-center</li>
+              <li>Dentro de este div crear un h1 con la clase display-4 y un texto aleatorio</li>
+              <li>Para centrar el texto usamos flexbox aplicando al contenedor principal
+                 las clases d-flex justify-content-center flex-column align-items-center (utilidades botstrapt)</li>
+              <li>Para que el h1 tome el color blanco aplicamos la clase text-white al h1</li>
+            </ol>
+            <figure><img src="images/form-titulo.png" alt="" width="900"></figure>
+            <h4>Input</h4>
+            <ol>
+              <li>Para hacer el Formulario  abrimos la etiqueta form</li>
+              <li>Dentro del form creamos un div con la clase form-group para el primer input</li>
+              <li>Dentro del div creamos un input para el nombre de tipo texto y le asignamos la clase form-control</li>
+              <li>Para el campo email realizamos el paso anterior, pero para el campo e-mail</li>
+              <li>Creamos un tercer input de tipo submit para el boton y le asignamos la clase btn btn-primary para darle estilo
+                ademas adicionamos el atributo value enviar
               </li>
-                  <li>
-                  	Abrimos el archivo HTML y creamos un div contenedor con la
-                  	clase (container-fluid), dentro de este pegamos la plantilla base y cambiamos el color del menu
-                  	usando la clase (navbar-dark bg-dark tambien aplicamos la clase (bg-dark) al div contenedor
-                  </li>
-                  <li>
-                      eliminamos el buscar y a los li les quitamos la clase del estilo (disabled) y copiamos los li
-                      hasta tener 4 items simples,
-                  </li>
-                  <li>Para que los items li se alinien a la derecha cambiamos la clase del ul asi (ms-auto por me-auto)</li>
-                  <li>Agregamos la imagen en dentro de la etiqueta de enlace (a)</li>
-          </ol>
-          <p>A continuacion la imagen del codigo citando algunos de los items anteriores</p>
-          <figure><img src="images/nav.png" alt="" width="900"></figure>
+              <li>Para poner el formulario en linea agregamos flexbox a la etiqueta form con la clase d-flex </li>
+            </ol>
+          </div>
 
         
       </div>

@@ -1,0 +1,7 @@
+.suscribir{
+    background: #6B6B6B;
+    background: -webkit-linear-gradient(to bottom, #6B6B6B 61%, #FFFFFF 64%);
+    background: -moz-linear-gradient(to bottom, #6B6B6B 61%, #FFFFFF 64%);
+    background: linear-gradient(to bottom, #6B6B6B 61%, #FFFFFF 64%);
+    height: 400px;
+}
