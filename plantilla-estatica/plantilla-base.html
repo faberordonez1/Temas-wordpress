@@ -29,7 +29,7 @@
                 <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 nav "> <!--4-->
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 nav text-center"> <!--4-->
                   <li class="nav-item">
                     <a class="nav-link" href="#">Link</a>
                   </li>
@@ -49,24 +49,61 @@
     </div>
     <!-- Fin navbar -->
 
-    <!-- Suscribir -->
+    <!-- Formulario Suscribir -->
     <div class="container-fluid suscribir d-flex flex-column justify-content-center align-items-center"><!-- 1 y 5-->
       <div class="text-center"><!-- 3 y 4-->
         <h1 class="display-4 text-white">Lorem ipsum dolor</h1><!-- 6-->
       </div>
-      <form action="" class="d-flex">
-        <div class="form-group">
-          <input type="text" placeholder="nombre" class="form-control">
+       
+      <!-- Input -->
+      <form action="" class="d-flex flex-column flex-sm-row"> <!--1, 6 y 7 Input-->
+        <div class="form-group mb-3 me-sm-3"> <!-- 2,9,10 input-->
+          <input type="text" placeholder="nombre" class="form-control"><!-- 3 input-->
         </div>
-        <div class="form-group">
+        <div class="form-group mb-3 me-sm-3"><!-- 4 input-->
           <input type="text" placeholder="Email" class="form-control">
         </div>
-        <div class="form-group">
+        <div class="form-group mb-3 me-sm-3"><!-- 5 input-->
           <input type="submit" class="form-control btn btn-primary" value="Enviar">
         </div>
-      </form>
+      </form>  <!--fin Input -->
     </div>
     <!--Fin suscribir-->
+
+    <!-- Contenido -->
+    <div class="container my-5"> <!-- 1  Contenido-->
+        <div class="row"> <!-- 2 Contenido-->
+              <!-- Articulo -->
+              <div class="col-12 col-sm-6 col-md-4"><!-- 3 Contenido-->
+                    <div class="card mb-3"> <!-- 4 y 7 Contenido-->
+                        <img src="https://loremflickr.com/940/788" class="card-img-top img-fluid"><!-- 4 y 5 Contenido-->
+                        <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                        <div class="card-footer"><!-- 8  Contenido-->
+                          <small class="text-muted">Fecha / Categorias / Autor</small>
+                        </div>
+                    </div>
+              </div>        
+              <!-- Fin Articulo -->    
+              <!-- Articulo --> <!-- 9 Contenido-->  
+        </div>
+    </div>
+    <!-- Fin Contenido -->
+    
+    
+    <!-- Footer -->
+    <div class="container-fluid bg-dark text-white py-3">  <!-- 1 footer -->
+        <div class="container text-center">  <!-- 2 footer -->
+          <p><!-- 3 footer -->
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis officia delectus impedit tenetur magnam
+            corrupti, facere distinctio repellendus illo hic odit ea ipsa doloremque repudiandae, architecto
+            voluptatum. Praesentium, obcaecati. Dolor?
+          </p>
+        </div>
+    </div>
+    <!-- Fin Footer -->
 
     <!-- CDN JS Boots -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
