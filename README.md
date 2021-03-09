@@ -5,7 +5,9 @@ Guia Tema
 https://faberordonez1.github.io/Temas-wordpress/Guia/guia-temas-wp.html
 
 
-1 Plantilla estatica
+## 1 Plantilla estatica
+
+
 Index https://faberordonez1.github.io/Temas-wordpress/plantilla-estatica/
 
 Single https://faberordonez1.github.io/Temas-wordpress/plantilla-estatica/single.html
