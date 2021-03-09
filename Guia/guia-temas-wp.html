@@ -16,125 +16,148 @@
     <div class="container">
       <h1>Temas para Wordpress con Bootstrap</h1>
       <a href="https://developer.wordpress.org">Documentación</a>
+      
       <hr>
-       <div> 
-            <h2>Creando pagina estatica con Bootstrap</h2>
-
-            <div><!--Nav -->
-              <h3>Nav</h3>
-              <ol>
-                  <li>
-                      Para crear el menu vamos a la documentación de Bootstrap en la seccion componentes>nav
-                    y copiamos la plantilla base
-                  </li>
-                      <li>
-                        Abrimos el archivo HTML y creamos un div contenedor con la
-                        clase (container-fluid), dentro de este pegamos la plantilla base y cambiamos el color del menu
-                        usando la clase (navbar-dark bg-dark tambien aplicamos la clase (bg-dark) al div contenedor
-                      </li>
-                      <li>
-                          eliminamos el buscar y a los li les quitamos la clase del estilo (disabled) y copiamos los li
-                          hasta tener 4 items simples,
-                      </li>
-                      <li>Para que los items li se alinien a la derecha cambiamos la clase del ul asi (ms-auto por me-auto)</li>
-                      <li>Agregamos la imagen en dentro de la etiqueta de enlace (a)</li>
-              </ol>
-              <p>A continuacion la imagen del codigo citando algunos de los items anteriores</p>
-              <figure><img src="images/nav.png" alt="" width="900"></figure>
-              <h4>Diseño nav</h4>
-              <figure><img src="images/navimage.png" alt="" width="900"></figure>
-        </div> <!-- End Nav-->
-
-          <div> <!--Formulario -->
-              <h3>Formulario</h3>
-              <h4>Titulo</h4>
-              <ol>
-                <li>Crear div contenedor con la clase container fluid</li>
-                <li>Enlazar el archivo style.css y aplicamos la clase suscribir del style.css al contenedor creado</li>
-                <li>Creamos otro div interno con la clase text-center</li>
-                <li>Dentro de este div crear un h1 con la clase display-4 y un texto aleatorio</li>
-                <li>Para centrar el texto usamos flexbox aplicando al contenedor principal
-                  las clases d-flex justify-content-center flex-column align-items-center (utilidades botstrapt)</li>
-                <li>Para que el h1 tome el color blanco aplicamos la clase text-white al h1</li>
-              </ol>
-              <figure><img src="images/form-titulo.png" alt="" width="900"></figure>
-              <h4>Input</h4>
-              <ol>
-                <li>Para hacer el Formulario  abrimos la etiqueta form</li>
-                <li>Dentro del form creamos un div con la clase form-group para el primer input</li>
-                <li>Dentro del div creamos un input para el nombre de tipo texto y le asignamos la clase form-control</li>
-                <li>Para el campo email realizamos el paso anterior, pero para el campo e-mail</li>
-                <li>Creamos un tercer input de tipo submit para el boton y le asignamos la clase btn btn-primary para darle estilo
-                  ademas adicionamos el atributo value enviar </li>
-                <li>Para poner el formulario en linea agregamos flexbox a la etiqueta form aplicando la clase d-flex </li>
-                <li>Para centrar los campos del formulario en responsive aplicamos las clases de flexbox  flex-column flex-sm-row
-                  a la etiqueta form</li>
-                <li>Para centrar los elementos del nav en responsive aplicamos la clase text-center al ul del nav</li>
-                <li>Para separar los input en desktop agregamos un espaciado a la derecha añadiendo la clase me-sm-3 al div con la clase form-group</li>
-                <li>Para separar los input verticalmente en responsive agregamos un espaciado 
-                  añadiendo la clase mb-3 al div con la clase form-group</li>                    
-               </ol>
-              <figure><img src="images/input-code.png" alt="" width="900"></figure>
-              <h5>Desktop</h5>
-              <figure><img src="images/form.png" alt="" width="900"></figure>
-              <h5>Responsive</h5>
-              <figure><img src="images/form-responsive.png" alt="" width="500"></figure>
-            </div> <!--Formulario -->
-            
-            <div><!-- Contendo  -->
-              <h3>Contenido</h3>
-              <ol>
-                <li>Para agregar contenido creamos un nuevo div con la clase container con un margen en y de 5</li>
-                <li>Dentro creamos otro div con la clase row para usar la grid de bootstrap</li>
-                <li>Creamos un nuevo div y se le aplica la clase col-12 col-sm-6 col-md-4 para usar la grid de bootstrap </li>
-                <li>Copiamos la plantilla de una card de bootstrap y se pega dentro del contenedor creado (entre comentario articulo)y le quitamos el style</li>
-                <li>Agregamos la ruta de la imagen de la card  https://loremflickr.com/940/788/</li>
-                <li>A la etiqueta img aplicamos la clase img-fluid para que se adapte en responsive</li>
-                <li>Agregamos un espaciado inferior junto a la clase card aplicando mb-3</li>
-                <li>Agregamos un texto utilizando el div con la clase card-footer text-muted de los templates de bootstrap
-                  se pega junto a card-body y cambiamos el texto por fecha/etiquetas/categorias/Autor
-                </li>
-                <li>Copiamos las card completa 2 veces mas </li>
-              </ol>
-              <figure><img src="images/contenido.png" alt="" width="800"></figure>
-              <h5>Articulos desktop</h5>
-              <figure><img src="images/contenido-desktop.png" alt="" width="700"></figure>
-              
-            </div><!-- Fin Contendo  -->
-            
-            <!-- Footer -->
-            <div>
-              <h3>Footer</h3>
-              <ol>
-                <li>Creamos un div con las clases de bootstrapt container-fluid bg-dark text-white py-3 (fondo negro,texto blanco y espaciado)</li>
-                <li>Dentro creamos otro div con las clases  container text-center</li>
-                <li>Dentro del segundo div creamos un parrafo de 3 lineas</li>
-              </ol>
-              <figure><img src="images/footer-code.png" alt="" width="700"></figure>
-              <h5>footer</h5>
-              <figure><img src="images/footer.png" alt="" width="600"></figure>
-
-          </div>
-          <!-- End Footer -->
-        
-      </div>
+      <div><!---Seccion Inicial-->
+            <h2>Pagina estatica HTML Inicial</h2>
+            <p>Iniciamos con 3 paginas estaticas creadas con HTML y Bootstrap, estas estaran enlazadas entre si, estas luego se modificaran para crear el tema</p>
+            <ul>
+              <li><strong>index.html: </strong> Página principal</li>
+              <li><strong>single.html:</strong> Página de entradas</li>
+              <li>
+                <strong>page.html: </strong> Página de destino de los items del menú
+              </li>
+            </ul>
+            <figure><img src="images/start.png" alt="" width="800"></figure>
+            <p>Convertimos el archivo index.html en index.php el cual a su vez se divide en 3 archivos header, entradas y footer</p>
+            <figure><img src="images/html-to-php.png" alt="" width="800"></figure>
+      </div><!---Fin Seccion Inicial-->
 
       <hr>
-      <div>
-        <h2>Pagina estatica HTML Inicial</h2>
-        <p>Iniciamos con 3 paginas estaticas creadas con HTML y Bootstrap, estas estaran enlazadas entre si, estas luego se modificaran para crear el tema</p>
-        <ul>
-          <li><strong>index.html: </strong> Página principal</li>
-          <li><strong>single.html:</strong> Página de entradas</li>
-          <li>
-            <strong>page.html: </strong> Página de destino de los items del menú
-          </li>
-        </ul>
-        <figure><img src="images/start.png" alt="" width="800"></figure>
-        <p>Convertimos el archivo index.html en index.php el cual a su vez se divide en 3 archivos header, entradas y footer</p>
-        <figure><img src="images/html-to-php.png" alt="" width="800"></figure>
+       <div> <!---Paginas estatica-->
+          <h2>Páginas estaticas con Bootstrap</h2>
         
-      </div>
+          <div><!---Index-->
+                <h3>Index.html</h3>
+                <hr>
+                <div><!--Nav -->
+                    <h4>Nav</h4>
+                    <ol>
+                        <li>
+                            Para crear el menu vamos a la documentación de Bootstrap en la seccion componentes>nav
+                          y copiamos la plantilla base
+                        </li>
+                            <li>
+                              Abrimos el archivo HTML y creamos un div contenedor con la
+                              clase (container-fluid), dentro de este pegamos la plantilla base y cambiamos el color del menu
+                              usando la clase (navbar-dark bg-dark tambien aplicamos la clase (bg-dark) al div contenedor
+                            </li>
+                            <li>
+                                eliminamos el buscar y a los li les quitamos la clase del estilo (disabled) y copiamos los li
+                                hasta tener 4 items simples,
+                            </li>
+                            <li>Para que los items li se alinien a la derecha cambiamos la clase del ul asi (ms-auto por me-auto)</li>
+                            <li>Agregamos la imagen en dentro de la etiqueta de enlace (a)</li>
+                    </ol>
+                    <p>A continuacion la imagen del codigo citando algunos de los items anteriores</p>
+                    <figure><img src="images/nav.png" alt="" width="900"></figure>
+                    <h5>Diseño nav</h5>
+                    <figure><img src="images/navimage.png" alt="" width="900"></figure>
+                </div> <!-- End Nav-->
+                <div> <!--Formulario -->
+                    <h4>Formulario</h4>
+                    <h5>Titulo</h5>
+                    <ol>
+                      <li>Crear div contenedor con la clase container fluid</li>
+                      <li>Enlazar el archivo style.css y aplicamos la clase suscribir del style.css al contenedor creado</li>
+                      <li>Creamos otro div interno con la clase text-center</li>
+                      <li>Dentro de este div crear un h1 con la clase display-4 y un texto aleatorio</li>
+                      <li>Para centrar el texto usamos flexbox aplicando al contenedor principal
+                        las clases d-flex justify-content-center flex-column align-items-center (utilidades botstrapt)</li>
+                      <li>Para que el h1 tome el color blanco aplicamos la clase text-white al h1</li>
+                    </ol>
+                    <figure><img src="images/form-titulo.png" alt="" width="900"></figure>
+                    <h5>Input</h5>
+                    <ol>
+                      <li>Para hacer el Formulario  abrimos la etiqueta form</li>
+                      <li>Dentro del form creamos un div con la clase form-group para el primer input</li>
+                      <li>Dentro del div creamos un input para el nombre de tipo texto y le asignamos la clase form-control</li>
+                      <li>Para el campo email realizamos el paso anterior, pero para el campo e-mail</li>
+                      <li>Creamos un tercer input de tipo submit para el boton y le asignamos la clase btn btn-primary para darle estilo
+                        ademas adicionamos el atributo value enviar </li>
+                      <li>Para poner el formulario en linea agregamos flexbox a la etiqueta form aplicando la clase d-flex </li>
+                      <li>Para centrar los campos del formulario en responsive aplicamos las clases de flexbox  flex-column flex-sm-row
+                        a la etiqueta form</li>
+                      <li>Para centrar los elementos del nav en responsive aplicamos la clase text-center al ul del nav</li>
+                      <li>Para separar los input en desktop agregamos un espaciado a la derecha añadiendo la clase me-sm-3 al div con la clase form-group</li>
+                      <li>Para separar los input verticalmente en responsive agregamos un espaciado
+                        añadiendo la clase mb-3 al div con la clase form-group</li>
+                    </ol>
+                    <figure><img src="images/input-code.png" alt="" width="900"></figure>
+                    <h6>Desktop</h6>
+                    <figure><img src="images/form.png" alt="" width="900"></figure>
+                    <h6>Responsive</h6>
+                    <figure><img src="images/form-responsive.png" alt="" width="500"></figure>
+                </div> <!--Formulario -->
+                
+                <div><!-- Contendo  -->
+                    <h4>Contenido</h4>
+                    <ol>
+                      <li>Para agregar contenido creamos un nuevo div con la clase container con un margen en y de 5</li>
+                      <li>Dentro creamos otro div con la clase row para usar la grid de bootstrap</li>
+                      <li>Creamos un nuevo div y se le aplica la clase col-12 col-sm-6 col-md-4 para usar la grid de bootstrap </li>
+                      <li>Copiamos la plantilla de una card de bootstrap y se pega dentro del contenedor creado (entre comentario articulo)y le quitamos el style</li>
+                      <li>Agregamos la ruta de la imagen de la card  https://loremflickr.com/940/788/</li>
+                      <li>A la etiqueta img aplicamos la clase img-fluid para que se adapte en responsive</li>
+                      <li>Agregamos un espaciado inferior junto a la clase card aplicando mb-3</li>
+                      <li>Agregamos un texto utilizando el div con la clase card-footer text-muted de los templates de bootstrap
+                        se pega junto a card-body y cambiamos el texto por fecha/etiquetas/categorias/Autor
+                      </li>
+                      <li>Copiamos las card completa 2 veces mas </li>
+                    </ol>
+                    <figure><img src="images/contenido.png" alt="" width="800"></figure>
+                    <h6>Articulos desktop</h6>
+                    <figure><img src="images/contenido-desktop.png" alt="" width="700"></figure>
+                </div><!-- Fin Contendo  -->
+                
+                
+                <div><!-- Footer -->
+                    <h4>Footer</h4>
+                    <ol>
+                      <li>Creamos un div con las clases de bootstrapt container-fluid bg-dark text-white py-3 (fondo negro,texto blanco y espaciado)</li>
+                      <li>Dentro creamos otro div con las clases  container text-center</li>
+                      <li>Dentro del segundo div creamos un parrafo de 3 lineas</li>
+                    </ol>
+                    <figure><img src="images/footer-code.png" alt="" width="700"></figure>
+                    <h6>footer</h6>
+                    <figure><img src="images/footer.png" alt="" width="600"></figure>
+                </div><!-- End Footer -->
+            </div><!---Fin Index-->
+
+            <div><!---Page.html-->
+                <h3>Page.html</h3>
+                <p>Página de aterrizaje de las pestañas de menu</p>
+                <hr>
+                <div>
+                    <ol>
+                      <li>Creamos un nuevo archivo con el nombre page.html</li>
+                      <li>Copiamos el codigo ya creado en el index.html desde el inicio hasta fin suscribir y lo pegamos en 
+                        page.html</li>
+                      <li>De nuevo copiamosy pegamos pero esta ves desde el comentario de inico del footer hasta fin del cierre de la 
+                        etiqueta principal html</li>
+                      <li>Despues del cierre de fin suscribir hacemos un nuevo comentario contenido menu y fin contenido</li>
+                      <li>Dentro de los comentarios creamos un nuevo div con la clase container my-5 y el espaciado en y</li>
+                      <li>Dentro del div creamos un H2 con texto para el titulo de la pestaña</li>
+                      <li>Creamos un nuevo div con la clase text-justify  para justificar el texto contenido</li>
+                      <li>Dentro del nuevo div agregamos los parrafo con texto contenido</li>
+                      <li></li>
+                    </ol>
+                </div>
+
+            </div><!---Fin Page.html-->
+
+      </div><!---End Pagina estatica-->
+
     </div>
   </body>
 </html>
