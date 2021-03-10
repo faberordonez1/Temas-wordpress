@@ -6,11 +6,11 @@
 <IfModule mod_rewrite.c>
 RewriteEngine On
 RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
-RewriteBase /Wordpress/Temas-wordpress/wordpress/
+RewriteBase /Wordpress/Temas-wordpress/
 RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /Wordpress/Temas-wordpress/wordpress/index.php [L]
+RewriteRule . /Wordpress/Temas-wordpress/index.php [L]
 </IfModule>
 
 # END WordPress

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+    <title>Temas para Worpress</title>
+  </head>
+  <body>
+        <!-- Navbar -->
+     <div class="container-fluid bg-dark">  <!--2-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark container"><!--2-->
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">
+                <img src="https://getbootstrap.com/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24"><!--5-->
+                + Wordpress
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 nav text-center"> <!--4-->
+                  <li class="nav-item">
+                    <a class="nav-link" href="plantilla.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="implementacion.html">Implementación</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </div>
+    <!-- Fin navbar -->
+    <div class="container">
+      <h1>Integración en Wordpress</h1>
+      <a href="https://developer.wordpress.org">Documentación</a>
+      
+      <hr>
+      <div><!---Seccion Inicial-->
+            <h2>Cargar Plantilla HTML y Bootstrapt</h2>
+            <p>En esta seccion instalaremos la plantilla estatica como tema de wordpress</p>
+            <ol>
+              <li>Instalamos Wordpress</li>
+              <li>Nos dirigimos la carpeta donde se instalo worpress luego wp-contents/themes</li>
+              <li>Creamos una nueva carpeta con el nombre del tema (tema-1)</li>
+              <li>Ahora copiamos los archivos del tema estatico y los copiamos en la carpeta estatica</li>
+              <li>Cambiamos el nombre del index.html a index.php</li>
+              <li>Copiamos los <a href="https://developer.wordpress.org/themes/basics/main-stylesheet-style-css/" target="_blank">comentarios</a> 
+                de wordpress para la hoja de estilos principal y los pegamos al inicio del archivo style.css</li>
+             <li>Modificamos los comentarios pegados de acuerdo a la informacion de nuestro tema, ya que con este 
+                 archivo se identifica el tema (las licencias se pueden eliminar si no es tema comercial)</li>
+            <li>Verificamos en el administrador de temas de wordpress y ya aparece nuestro tema sin miniatura </li>
+            <li>Movemos el style.css a la raiz del tema junto al index.php para lo detecte wordpress</li>
+            <li>Al ver detalles del tema podemos ver la informacion que se agrego en style.css</li>
+            <li>Presionamos activar y ya podemos probar el tema en el sitio web, en este punto solo se visualizara la estructira HTML</li>
+            </ol>
+            <figure><img src="images/start.png" alt="" width="800"></figure>
+      </div><!---Fin Seccion Inicial-->
+      
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+  </body>
+</html>
