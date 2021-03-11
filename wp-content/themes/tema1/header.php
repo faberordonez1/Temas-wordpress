@@ -9,21 +9,22 @@
 
     <!-- Archivo Local  -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
-
     <!-- CDN -->
-    <!--    <link
+   <!--    <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
     rel="stylesheet"
     integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
     crossorigin="anonymous"
   /> -->
 
-  <!-- Style -->
-    <link rel="stylesheet" href="style.css">
+    <!-- Style -->
+  <link rel="stylesheet" href="style.css">
 
     <title>Document</title>
 </head>
 <body>
+    <!-- <h3> <?php echo bloginfo('template_url');?></h3> // Prueba print ruta-->
+
     <!-- Navbar -->
      <div class="container-fluid bg-dark">  <!--2-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark container"><!--2-->
@@ -76,41 +77,3 @@
       </form>  <!--fin Input -->
     </div>
     <!--Fin suscribir-->
-
-    <!--  Contenido menu    -->
-    <div class="container my-5">
-        <h2>Lorem ipsum dolor sit </h2>
-        <div class="text-justify">
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae omnis dolor quidem itaque praesentium tenetur corporis commodi amet inventore aspernatur iure sint, minus explicabo neque molestiae earum, cupiditate vero corrupti.
-            Unde fugit doloribus dolor commodi aliquid totam cumque mollitia ducimus? Ab quam libero architecto dicta magnam quae perferendis sapiente alias dolores officiis necessitatibus corporis voluptas excepturi, deleniti voluptatibus illo doloremque?
-            Velit pariatur quas facilis quam natus sint alias eius ducimus quod rerum accusamus ea itaque ut ex eos quae laborum, voluptas doloribus ratione perferendis, ab voluptatibus reprehenderit. Dignissimos, ipsum debitis?</p>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae omnis dolor quidem itaque praesentium tenetur corporis commodi amet inventore aspernatur iure sint, minus explicabo neque molestiae earum, cupiditate vero corrupti.
-            Unde fugit doloribus dolor commodi aliquid totam cumque mollitia ducimus? Ab quam libero architecto dicta magnam quae perferendis sapiente alias dolores officiis necessitatibus corporis voluptas excepturi, deleniti voluptatibus illo doloremque?
-            Velit pariatur quas facilis quam natus sint alias eius ducimus quod rerum accusamus ea itaque ut ex eos quae laborum, voluptas doloribus ratione perferendis, ab voluptatibus reprehenderit. Dignissimos, ipsum debitis?</p>
-        </div>
-    </div>
-    <!--  Fin Contenido menu    -->
-    
-    
-    <!-- Footer -->
-    <div class="container-fluid bg-dark text-white py-3">  <!-- 1 footer -->
-        <div class="container text-center">  <!-- 2 footer -->
-          <p><!-- 3 footer -->
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis officia delectus impedit tenetur magnam
-            corrupti, facere distinctio rep
-          </p>
-        </div>
-    </div>
-    <!-- Fin Footer -->
-
-     <!-- Bootstrap JS -->
-    
-    <!-- CDN -->
-    <!--     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" 
-    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" 
-    crossorigin="anonymous"></script>
-     -->    
-    <!-- Archivos locales -->
-    <script src="js/bootstrap.bundle.min.js"></script>
-</body>
-</html>

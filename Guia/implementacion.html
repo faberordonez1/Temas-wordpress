@@ -46,11 +46,11 @@
     <!-- Fin navbar -->
     <div class="container">
       <h1>Integración en Wordpress</h1>
-      <a href="https://developer.wordpress.org">Documentación</a>
+      <a href="https://developer.wordpress.org" target="_blank">Doc 📄✅</a>
       
       <hr>
-      <div><!---Seccion Inicial-->
-            <h2>Cargar Plantilla HTML y Bootstrapt</h2>
+      <div><!--- Add to Themes-->
+            <h3>Agregar Plantilla HTML como tema</h3>
             <p>En esta seccion instalaremos la plantilla estatica como tema de wordpress</p>
             <ol>
               <li>Instalamos Wordpress</li>
@@ -63,13 +63,34 @@
              <li>Modificamos los comentarios pegados de acuerdo a la informacion de nuestro tema, ya que con este 
                  archivo se identifica el tema (las licencias se pueden eliminar si no es tema comercial)</li>
             <li>Verificamos en el administrador de temas de wordpress y ya aparece nuestro tema sin miniatura </li>
-            <li>Movemos el style.css a la raiz del tema junto al index.php para lo detecte wordpress</li>
+            <li>el style.css debe estar en la raiz del tema junto al index.php para lo detecte wordpress</li>
             <li>Al ver detalles del tema podemos ver la informacion que se agrego en style.css</li>
-            <li>Presionamos activar y ya podemos probar el tema en el sitio web, en este punto solo se visualizara la estructira HTML</li>
+            <li>Presionamos activar y ya podemos probar el tema en el sitio web, en este punto solo se visualizara la estructura HTML</li>
             </ol>
-            <figure><img src="images/start.png" alt="" width="800"></figure>
-      </div><!---Fin Seccion Inicial-->
-      
+          </div><!---Add a Themes-->
+          
+          <div><!-- Template Tags -->
+            <h3>Template Tags </h3>
+            <a href="https://developer.wordpress.org/themes/basics/template-tags/" target="_blank">Doc 📄✅</a><br><br>
+            <p>En esta seccion se va a dividir el index.php en 3 archivos header.php, entradas.php,footer.php y con los templete tag 
+              vamos llamando cada uno desde el index. Tambien agregaremos en la raiz el archivo screenshot.png de medidas (1200x900) que sera la miniatura del tema
+            </p>
+            <ol>
+              <li>Creamos un archivo header.php y otro footer.php</li>
+              <li>Vamos al index.php seleccionamos desde el inicio del archivo hasta el final del comentario fin suscribir y lo cortamos</li>
+              <li>Abrimos header.php y pegamos el codigo cortado</li>
+              <li>Para llamar el header.php, abrimos el index.php y al inicio del archivo abrimos y cerramos etiquetas de php y 
+                entre ellas usamos el template tag get_header(); </li>
+              <li>Para agregar la ruta de los estilos al header.php podemos utilizar el template tag bloginfo('template_url'); esto nos muestra la ruta donde 
+                esta ubicado nuestro sitio web. Lo podemos probar imprimiendolo con un echo de php</li>
+              <li>Agregamos el template tag con sus etiquetas php en el atributo href: y luego la ruta de los archivos y listo agregados los estilo</li>
+              <li>Los estilos CSS personalizados los copiamos y los pegamos dentro de una nueva etiqueta style en el head del header.php</li>
+              <li></li>
+            </ol>
+            
+          </div><!-- FinTemplate Tags -->
+          
+          <figure><img src="images/start.png" alt="" width="800"></figure>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
   </body>
