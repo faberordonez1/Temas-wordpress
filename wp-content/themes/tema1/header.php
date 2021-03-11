@@ -8,7 +8,7 @@
     <!-- Bootstrapt  CSS-->
 
     <!-- Archivo Local  -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo bloginfo('template_url');?>/css/bootstrap.min.css">
     <!-- CDN -->
    <!--    <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
@@ -18,7 +18,7 @@
   /> -->
 
     <!-- Style -->
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="<?php echo bloginfo('template_url');?>/style.css">
 
     <title>Document</title>
 </head>
