@@ -72,28 +72,69 @@
           <div><!-- Template Tags -->
             <h3>Template Tags </h3>
             <a href="https://developer.wordpress.org/themes/basics/template-tags/" target="_blank">Doc 📄✅</a><br><br>
+            
+            <p>Esta herramientas permiten incrustrar contenido de forma dinamica en cualquier lugar del tema de wordpress </p>
             <p>En esta seccion se va a dividir el index.php en 3 archivos header.php, entradas.php,footer.php y con los templete tag 
               vamos llamando cada uno desde el index. Tambien agregaremos en la raiz el archivo 📷screenshot.png de medidas (1200x900) que sera la miniatura del tema
             </p>
             <ol>
               <li>Creamos un archivo header.php y otro footer.php</li>
               <li>Vamos al index.php seleccionamos desde el inicio del archivo hasta el final del comentario fin suscribir y lo cortamos</li>
+             
+              <h4>header.php</h4>
               <li>Abrimos header.php y pegamos el codigo cortado</li>
               <li>Para llamar el header.php, abrimos el index.php y al inicio del archivo abrimos y cerramos etiquetas de php y 
-                entre ellas usamos el template tag get_header(); </li>
-              <li>Para agregar la ruta de los estilos al header.php podemos utilizar el template tag bloginfo('template_url'); esto nos muestra la ruta donde 
+                entre ellas usamos el template tag get_header();</li>
+              <li>Para agregar la ruta de los estilos al header.php podemos utilizar el template tag <u>bloginfo('template_url');</u> esto nos muestra la ruta donde 
                 esta ubicado nuestro sitio web. Lo podemos probar imprimiendolo con un echo de php</li>
-              <li>Agregamos el template tag con sus etiquetas php en el atributo href: y luego la ruta de los archivos y listo agregados los estilo</li>
+              <li>Agregamos el template tag del punto anterior con sus etiquetas php en el atributo href: y luego concatenamos la ruta de los archivos y listo agregados los estilos css</li>
               <li>Si no toma los estilos CSS personalizados loss copiamos y los pegamos dentro de una nueva etiqueta style en el head del header.php</li>
-              <li>Para editar el footer.php seleccionamos el index.php desde el inicio del comentario hasta el final
+              
+              <h4>footer.php</h4>
+              <li>Para editar el footer.php seleccionamos en el archivo index.php desde el inicio del comentario hasta el final
                 del archivo y cortamos
               </li>
               <li>Abrimos el footer.php y pegamos el codigo cortado</li>
               <li>Lo llamamos de la misma forma que se llamo el header.php pero esta vez, 
                 se agrega al final del index y se usa el template tag get_footer();</li>
-              <li>El menu no funciona de forma correcta en responsive, para resolverlo en footer.php agregamos los
-                archivo js de bootstrap de la misma forma que se agrgaron los estilo pero esta vez en el atriburo src
+              <li>El menu no funciona de forma correcta en responsive porque no esta enlazado el js de bootstrapt, para resolverlo en footer.php agregamos los
+                archivo js de bootstrap de la misma forma que se agregaron los estilos, pero esta vez en el atriburo src
               </li>
+
+              <h4>Navbar (menu)</h4>
+              <li>Regresamos al archivo header.php e identificamos el div que contiene el navbar en este caso tiene la clase de bootstrapt collapse navbar-collapse</li>
+              <li>Depues del cierre del div abrimos etiquetas php, para iniciar y crear este menu de forma dinamica</li>
+              <li>Agregamos el template tag donde cada item representa una parte del menu estatico segun la estructura ya definida</li>
+                <pre>
+                  wp_nav_menu(array(
+                  'theme_location'=>'',
+                  'container'=>'div',
+                  'container_class'=>'collapse navbar-collapse',
+                  'container_id'=>'navbarSupportedContent',
+                  'items_wrap'=>'ul completo con este codigo (%3$s) dentro de las 2 tag para los li',
+                  'menu_class'=>'nav-item'));
+              </pre>
+              <li>Borramos el codigo estatico del contenedor ppal el de la clase identificada anteriormente, y solo dejamos el menu dinamico ya que son iguales</li>
+              <li>Para que el menu funcione correctamente nos hace falta agregar la clase <u>nav-link</u> al ancla (a) dentro del li, esto no se puede agregar con los
+                parametros de wordpress escritos en los puntos anteriores
+              </li>
+              <li>Para añadirla creamos un nuevo archivo functions.php, abrimos el archivo y abrimos etiquetas de php</li>
+              <li>Escribimos el comentarios aqui creo mi menu, y abrimos un condicional if</li>
+              <pre>
+                if(function_exists('register_nav_menus')){
+                  register_nav_menus(array('superior'=>'Menu Principal superior'))
+
+                }
+              </pre>
+              <li>Validamos si existe la funcion resgister_nav_menus, si existe ejecutamos register_nav_menus con el array de todos los menus</li>
+              <li>Los menus se muestran en el orden: nombre => nombre que aparecera en wordpress, el primer nombre se debe agregar en el menu dinamico en el item theme_location=>'nombre'</li>
+              <li>Ya nos aparece la seccion de menus de worpress y ahi ya podemos crear nuevo un menu y ver la estructura personalizada y el nombre creado</li>
+              <li>El ancla (a) no tiene estilo porque no se ha agregado la clase de bootstrapt dinamicamente, para adicionarla vamos al archivo functions.php</li>
+              <li>Usamos la funcion add_filter() de wordpress y le pasamos el parametro 'nav_menu_link_attributes','clase_menu_invento',10,3 y cerramos</li>
+              <li>A continuacion creamos la funcion inventada, que debe recibir 3 parametros($atts,$item,$args)</li>
+              <li>Dentro de la funcion a la variable class le asignamos el valor 'nav-link' que seria la clase a añadir</li>
+              <li>a continuacion manipulamos el parametro $atts de la siguiente forma  $atts['class']=$class</li>
+              <li>A continuacion returnamos $atts y listo,el ancla ya tomo la clase de bootstrap de forma dinamica</li>
             </ol>
             
           </div><!-- FinTemplate Tags -->
