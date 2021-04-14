@@ -105,14 +105,14 @@
               <li>Regresamos al archivo header.php e identificamos el div que contiene el navbar en este caso tiene la clase de bootstrapt collapse navbar-collapse</li>
               <li>Depues del cierre del div abrimos etiquetas php, para iniciar y crear este menu de forma dinamica</li>
               <li>Agregamos el template tag donde cada item representa una parte del menu estatico segun la estructura ya definida</li>
-                <pre>
-                  wp_nav_menu(array(
-                  'theme_location'=>'',
-                  'container'=>'div',
-                  'container_class'=>'collapse navbar-collapse',
-                  'container_id'=>'navbarSupportedContent',
-                  'items_wrap'=>'ul completo con este codigo (%3$s) dentro de las 2 tag para los li',
-                  'menu_class'=>'nav-item'));
+                <pre class="bg-dark text-light p-3">
+wp_nav_menu(array(
+'theme_location'=>'',
+'container'=>'div',
+'container_class'=>'collapse navbar-collapse',
+'container_id'=>'navbarSupportedContent',
+'items_wrap'=>'ul completo con este codigo (%3$s) dentro de las 2 tag para los li',
+'menu_class'=>'nav-item'));
               </pre>
               <li>Borramos el codigo estatico del contenedor ppal el de la clase identificada anteriormente, y solo dejamos el menu dinamico ya que son iguales</li>
               <li>Para que el menu funcione correctamente nos hace falta agregar la clase <u>nav-link</u> al ancla (a) dentro del li, esto no se puede agregar con los
@@ -120,11 +120,11 @@
               </li>
               <li>Para añadirla creamos un nuevo archivo functions.php, abrimos el archivo y abrimos etiquetas de php</li>
               <li>Escribimos el comentarios aqui creo mi menu, y abrimos un condicional if</li>
-              <pre>
-                if(function_exists('register_nav_menus')){
-                  register_nav_menus(array('superior'=>'Menu Principal superior'))
+              <pre  class="bg-dark text-light p-3">
+if(function_exists('register_nav_menus')){
+  register_nav_menus(array('superior'=>'Menu Principal superior'))
 
-                }
+}
               </pre>
               <li>Validamos si existe la funcion resgister_nav_menus, si existe ejecutamos register_nav_menus con el array de todos los menus</li>
               <li>Los menus se muestran en el orden: nombre => nombre que aparecera en wordpress, el primer nombre se debe agregar en el menu dinamico en el item theme_location=>'nombre'</li>
@@ -138,6 +138,45 @@
             </ol>
             
           </div><!-- FinTemplate Tags -->
+         
+         
+          <div><!-- Loop Wordpress -->
+            <h3>Loop Entradas</h3>
+            <a href="https://developer.wordpress.org/themes/basics/the-loop/" target="_blank">Doc 📄✅</a>
+            <p>En esta seccion vamos configurar la forma de mostrar las entradas de blog de forma dinamica</p>
+            <ol>
+              <li>Vamos al index.php y dejamos solo un articulo de los 3 articulos estaticos ya creados</li>
+              <li>Vamos a la documentacion Loop de wordpress copiamos el script de ejemplo </li>
+              <pre class="bg-dark text-light p-3">
+if ( have_posts() ) : // Verifica si tenemos post
+    while ( have_posts() ) : the_post();  // Mientras existan post, muestra post
+         // Display post content //Configuraciones dinamicas del articulo (What the Loop Can Display)
+    endwhile; 
+endif; 
+              </pre>
+              <li>Nuevamente en el index.php agregamos la apertura de los condicionales php al inicio del blog 
+                estatico y las llaves de cierre al final del bloque, despues del cierre del blog estatico</li>
+              <li>Remplazamos el contenido estatico por las etiquetas php de contenido dinamico de wordpress de la siguiente forma</li>
+              <pre class="bg-dark text-light p-3">
+Categoria > the_category();
+Autor > the_author();
+Fecha > echo get_the_date();
+Titulo > the_title();
+Estracto > the_excerpt();
+
+link a entrada > the_permalink(); //para titulo
+               </pre>
+               <li>Para añadir un link dinamico al titulo lo encerramos dentro de un ancla (a) y en  href entre etiquetas php 
+                 agregamos la ultima etiqueta dinamica the_permalink();</li>
+              <li>Con esto ya se debe mostrar los articulos de forma dinamica en wordpress</li>
+              <li>En caso de que los articulos tengan multiples categorias, tendremos un problema de separacion, para 
+                resolverlo lo solucionamos agregando (',') comillas simples y un coma dentro de la tag de categorias</li>
+              <li>Para probar creamos una nueva entrada y una nueva categoria a la que la agregaremos esa entrada y a esa le copiamos el mismo estracto 
+                de la entrada que viene por defecto
+              </li>
+
+          </div> <!-- END Loop Wordpress -->
+
           
           <figure><img src="images/start.png" alt="" width="800"></figure>
     </div>
