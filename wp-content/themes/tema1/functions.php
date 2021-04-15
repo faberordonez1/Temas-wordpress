@@ -12,5 +12,8 @@
      return $atts;
  }
  
- 
+ /*Agregar imagen destacada */
+if (function_exists('add_theme_support')){
+    add_theme_support('post-thumbnail');
+}
 ?>

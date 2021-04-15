@@ -9,7 +9,10 @@
             while ( have_posts() ) : the_post();?> 
                 <div class="col-12 col-sm-6 col-md-4"><!-- 3 Contenido-->
                       <div class="card mb-3"> <!-- 4 y 7 Contenido-->
-                          <img src="https://loremflickr.com/940/788" class="card-img-top img-fluid"><!-- 4 y 5 Contenido-->
+                      <a href="the_permalink();"> <?php if (has_post_thumbnail()) {
+                        the_post_thumbnail('thumbnail', array('class' => 'card-img-top img-fluid'));
+                      }?></a>
+                      
                           <div class="card-body">
                             <a href="the_permalink();"><h5 class="card-title"><?php the_title();?></h5></a>
                             <p class="card-text"><?php the_excerpt();?></p>
