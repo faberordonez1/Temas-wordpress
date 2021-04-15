@@ -7,18 +7,18 @@
               <?php 
         if ( have_posts() ) : 
             while ( have_posts() ) : the_post();?> 
-              <div class="col-12 col-sm-6 col-md-4"><!-- 3 Contenido-->
-                    <div class="card mb-3"> <!-- 4 y 7 Contenido-->
-                        <img src="https://loremflickr.com/940/788" class="card-img-top img-fluid"><!-- 4 y 5 Contenido-->
-                        <div class="card-body">
-                          <a href="the_permalink();"><h5 class="card-title"><?php the_title();?></h5></a>
-                          <p class="card-text"><?php the_excerpt();?></p>
-                        </div>
-                        <div class="card-footer"><!-- 8  Contenido-->
-                          <small class="text-muted"><?php echo get_the_date();?> / <?php the_category(',') ?> / <?php the_author()?></small>
-                        </div>
-                    </div>
-              </div><?php 
+                <div class="col-12 col-sm-6 col-md-4"><!-- 3 Contenido-->
+                      <div class="card mb-3"> <!-- 4 y 7 Contenido-->
+                          <img src="https://loremflickr.com/940/788" class="card-img-top img-fluid"><!-- 4 y 5 Contenido-->
+                          <div class="card-body">
+                            <a href="the_permalink();"><h5 class="card-title"><?php the_title();?></h5></a>
+                            <p class="card-text"><?php the_excerpt();?></p>
+                          </div>
+                          <div class="card-footer"><!-- 8  Contenido-->
+                            <small class="text-muted"><?php echo get_the_date();?> / <?php the_category(',') ?> / <?php the_author()?></small>
+                          </div>
+                      </div>
+                </div><?php 
             endwhile; 
           endif; 
           ?>    

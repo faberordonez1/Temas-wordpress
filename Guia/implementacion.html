@@ -172,8 +172,47 @@ link a entrada > the_permalink(); //para titulo
               <li>En caso de que los articulos tengan multiples categorias, tendremos un problema de separacion, para 
                 resolverlo lo solucionamos agregando (',') comillas simples y un coma dentro de la tag de categorias</li>
               <li>Para probar creamos una nueva entrada y una nueva categoria a la que la agregaremos esa entrada y a esa le copiamos el mismo estracto 
-                de la entrada que viene por defecto
+                de la entradaque viene por defecto
               </li>
+
+              <h4>Imagen destacadas(Post Thumbnails)</h4>
+              <a href="https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/" target="_blank">Doc 📄✅</a>
+              <li>Las imagenes destacadas se agregan en el archivo funtion.php de acuerdo a la documentacion</li>
+              <li>De la documentacion copiamos el ejemplo de add tamaños personalizados, esto para agregar la imagen destacada sin link</li>
+              <pre class="bg-dark text-light p-3">
+if ( function_exists( 'add_theme_support' ) ) { //si existe soporte para imagenes
+  add_theme_support( 'post-thumbnails' ); // Agrega las imagenes
+  set_post_thumbnail_size( 150, 150, true ); // tamaño de la imagen
+
+  // additional image sizes
+  // delete the next line if you do not need additional image sizes
+  add_image_size( 'category-thumb', 300, 9999 ); // 300 pixels wide (and unlimited height)
+}
+              </pre>
+              <li>Vamos al function.php y pegamos el codigo al final del archivo y agregamos un comentario "Agg img destacada " al inicio para 
+                identificar lo que hace el bloque de código
+              </li>
+              <li>Del codigo pegado solo conservamos las 2 primeras líneas, ya que las demas líneas son para los tamaños de 
+                las imagenes pero estas no son necesarias porque se manejaran con Bootstrap y css</li>
+              <li>Guardamos y vamos al index.php y copiamos las clases de la etiqueta imagen (img) y luego borramos toda la etiqueta</li>
+              <li>La imagen dinamica debe tener un enlace a la entrada, por lo tanto la encerraremos en un ancla, de la misma forma que el titulo (P5)</li>
+              <li>Dentro del ancla abrimos etiquetas php y llamamos a la imagen destacada con el siguiente código de la documentacion</li>
+              <li>De la documentacion copiamos el bloque de codigo donde se incluye la imagen destacada y lo pegamos tentro del ancla</li>
+              <pre class="bg-dark text-light p-3">
+// check if the post or page has a Featured Image assigned to it.
+if ( has_post_thumbnail() ) {//
+  the_post_thumbnail();
+}
+              </pre>
+              <li>Para agregar las clases borradas de forma dinamica, a la etiqueta the_post_thumbnail le pasamos los parametros 
+                como se muestra en el ejemplo de la documentacion, este ejemplo esta ubicado en la parte superior al código del bloque anterior
+              </li>
+              <pre class="bg-dark text-light p-3">
+the_post_thumbnail( 'thumbnail', array( 'class' => 'alignleft' ) );
+              </pre>
+              <li>El primer parametro se debe llamar igual que el parametro de la etiqueta add_theme_support en el funtion.php por lo 
+                tanto se copia y se remplaza</li>
+              <li>En el valor del del primer item (class) del array pegamos la clase a incrustar, en este caso la copiada en P13 </li>
 
           </div> <!-- END Loop Wordpress -->
 
