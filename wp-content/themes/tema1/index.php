@@ -10,7 +10,7 @@
                 <div class="col-12 col-sm-6 col-md-4"><!-- 3 Contenido-->
                       <div class="card mb-3"> <!-- 4 y 7 Contenido-->
                       <a href="the_permalink();"> <?php if (has_post_thumbnail()) {
-                        the_post_thumbnail('thumbnail', array('class' => 'card-img-top img-fluid'));
+                        the_post_thumbnail('post-thumbnail', array('class' => 'card-img-top img-fluid'));
                       }?></a>
                       
                           <div class="card-body">

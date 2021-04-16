@@ -209,7 +209,7 @@ if ( has_post_thumbnail() ) {//
                 como se muestra en el ejemplo de la documentacion, este ejemplo esta ubicado en la parte superior al código del bloque anterior
               </li>
               <pre class="bg-dark text-light p-3">
-the_post_thumbnail( 'thumbnail', array( 'class' => 'alignleft' ) );
+the_post_thumbnail( 'post-thumbnail', array( 'class' => 'alignleft' ) );
               </pre>
               <li>El primer parametro se debe llamar igual que el parametro de la etiqueta add_theme_support en el funtion.php por lo 
                 tanto se copia y se remplaza</li>
@@ -243,9 +243,11 @@ the_post_thumbnail( 'thumbnail', array( 'class' => 'alignleft' ) );
               <li>Agregamos el header y footer de forma dinamica</li>
               <li>Para agregar el contenido de forma dinamica agregamos el loop de wordpress debajo del 
                 comentario articulo (P4)</li>
-              <li>Remplazmos los valores estaticos por los valores dinamicos de las etiquetas de wordpress,
+              <li>Remplazmos los valores estaticos por los valores dinamicos con las etiquetas de wordpress,
                 podemos tomar como ejemplo, la forma como se muestran las entradas en archivo index.php
               </li>
+              <li>El contenido se llama con la etiqueta the_content();</li>
+              <li>A las imagen estatica le quitamos la clase pasada como parametro y solo dejamos img-fluid</li>
 
             </ol>
 
