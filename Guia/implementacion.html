@@ -177,7 +177,8 @@ link a entrada > the_permalink(); //para titulo
 
               <h4>Imagen destacadas(Post Thumbnails)</h4>
               <a href="https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/" target="_blank">Doc 📄✅</a>
-              <li>Las imagenes destacadas se agregan en el archivo funtion.php de acuerdo a la documentacion</li>
+              <li>El soporte para las imagenes destacadas se agregan en el archivo funtion.php de acuerdo a la documentacion, si no se agregan 
+                el tema no soportara estas imagenes</li>
               <li>De la documentacion copiamos el bloque de código ejemplo de add tamaños personalizados, esto para agregar la imagen destacada sin link</li>
               <pre class="bg-dark text-light p-3">
 if ( function_exists( 'add_theme_support' ) ) { //si existe soporte para imagenes
@@ -215,6 +216,41 @@ the_post_thumbnail( 'thumbnail', array( 'class' => 'alignleft' ) );
               <li>En el valor del del primer item (class) del array pegamos la clase a incrustar, en este caso la copiada en P13 </li>
 
           </div> <!-- END Loop Wordpress -->
+          
+          <!-- Page.php y single.html -->
+          <div>
+            <h3>Pagina entradas y de paginas(single.php,page.php))</h3>
+            <p>En esta seccion se agrega de forma dinamica, la pagina de aterrizaje de las páginas del menu y de las entradas de blog</p>
+            
+            <h4>page.php (template para paginas)</h4>
+            <ol>
+              <li>En este caso abrimos el archivo page.html y cambiamos la extension a page.php</li>
+              <li>Borramos el codigo del header estatico y lo agregamos de forma estatica con la etiqueta get_header, 
+                en este caso se borra hasta el comentario fin suscribir
+              </li>
+              <li>Realizamos el mismo paso anterior con el footer</li>
+              <li>Para mostrar el contenido de forma dinamica es necesario agregar el loop de wordpress (P2 Seccion Loop). Lo abrimos antes 
+                del titulo y lo cerramos al final del div del parrafo
+
+              </li>
+              <li>Remplazamos el contenido estatico del H2, por dinamico con la opcion the_title() de wordpress</li>
+              <li>Los parrafos (p) estaticos los borramos ya que wordpress los genera automaticamente.Ahora Insertamos el parrafo de forma dinamica 
+                con la etiqueta de wordpress the_content();</li>
+              <li>Si queremos probar con una nueva pagina, la creamos y la añadimos al menu y ahi se puede visualizar</li>
+
+              <h4>single.php (template entradas de bñlog)</h4>
+              <li>Abrimos el archivo single.html y cambiamos la extension a .php</li>
+              <li>Agregamos el header y footer de forma dinamica</li>
+              <li>Para agregar el contenido de forma dinamica agregamos el loop de wordpress debajo del 
+                comentario articulo (P4)</li>
+              <li>Remplazmos los valores estaticos por los valores dinamicos de las etiquetas de wordpress,
+                podemos tomar como ejemplo, la forma como se muestran las entradas en archivo index.php
+              </li>
+
+            </ol>
+
+          </div>
+          <!-- Fin Page.php y single.html -->
 
           
           <figure><img src="images/start.png" alt="" width="800"></figure>
