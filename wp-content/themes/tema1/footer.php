@@ -1,5 +1,5 @@
   <!-- Footer -->
-  <div class="container-fluid bg-dark text-white py-3">  <!-- 1 footer -->
+  <div class="container-fluid bg-dark text-white py-3 fixed-bottom">  <!-- 1 footer -->
         <div class="container text-center">  <!-- 2 footer -->
           <p><!-- 3 footer -->
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis officia delectus impedit tenetur magnam

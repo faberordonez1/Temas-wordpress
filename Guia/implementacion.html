@@ -238,7 +238,7 @@ the_post_thumbnail( 'post-thumbnail', array( 'class' => 'alignleft' ) );
                 con la etiqueta de wordpress the_content();</li>
               <li>Si queremos probar con una nueva pagina, la creamos y la añadimos al menu y ahi se puede visualizar</li>
 
-              <h4>single.php (template entradas de bñlog)</h4>
+              <h4>single.php (template entradas de blog)</h4>
               <li>Abrimos el archivo single.html y cambiamos la extension a .php</li>
               <li>Agregamos el header y footer de forma dinamica</li>
               <li>Para agregar el contenido de forma dinamica agregamos el loop de wordpress debajo del 
@@ -247,12 +247,33 @@ the_post_thumbnail( 'post-thumbnail', array( 'class' => 'alignleft' ) );
                 podemos tomar como ejemplo, la forma como se muestran las entradas en archivo index.php
               </li>
               <li>El contenido se llama con la etiqueta the_content();</li>
-              <li>A las imagen estatica le quitamos la clase pasada como parametro y solo dejamos img-fluid</li>
+              <li>A la imagen estatica le quitamos la clase pasada como parametro y solo dejamos img-fluid</li>
 
             </ol>
 
           </div>
           <!-- Fin Page.php y single.html -->
+
+          <!-- Sidebar.php  -->
+          <diV>
+            <H3>Sidebar.php (Espacio para widgets)</H3>
+            <a href="https://developer.wordpress.org/themes/functionality/sidebars/" target="_blank">Doc 📄✅</a>
+            <a href="https://developer.wordpress.org/reference/functions/dynamic_sidebar/" target="_blank">Doc 2️⃣📄✅</a>
+            <p>El sidebar es la seccion donde se pueden arrastrar, los widgets, en esta seccion vamos a ver como implementarlo de forma dinamica</p>
+            <ol>
+              <li>Primero se debe crear un nuevo archivo sidebar.php</li>
+              <li>Vamos al single.php y cortamos los div hijos o sidebar y dejamos unicamente el div contenedor padre, porque este es el que
+                hace responsive el sidebar
+              </li>
+              <li>Pegamos los widgets cortados en el sidebar.php</li>
+              <li>De forma dinamica llamamos al archivo sidebar.php usando el template tag get_sidebar() dentro del contenedor padre dejado en single.php</li>
+              <li>Vamos a hacer que el archivo sidebar.php funcione de forma dinamica, para ello debemos agregar el sidebar al archivo function.php</li>
+              <li>En el function.php agregamos el comentario agregando sidebar,justo debajo de todo el codigo ya creado, esto  para identificar que hace  este bloque de codigo </li>
+              <li>Vamos a la documentacion en el apartado sidebar y copiamos el ejemplo</li>
+              <li>Pegamos el ejemplo copiado debajo de los comentarios</li>
+
+            </ol>
+          </diV>
 
           
           <figure><img src="images/start.png" alt="" width="800"></figure>

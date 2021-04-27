@@ -13,7 +13,7 @@
  }
  
  /*Agregar imagen destacada */
-if (function_exists('add_theme_support')){
+if (function_exists('add_theme_support')){/**Si existe soporte agg */
     add_theme_support('post-thumbnails');
 }
 ?>
