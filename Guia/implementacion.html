@@ -257,21 +257,55 @@ the_post_thumbnail( 'post-thumbnail', array( 'class' => 'alignleft' ) );
           <!-- Sidebar.php  -->
           <diV>
             <H3>Sidebar.php (Espacio para widgets)</H3>
-            <a href="https://developer.wordpress.org/themes/functionality/sidebars/" target="_blank">Doc 📄✅</a>
+            <a href="https://developer.wordpress.org/themes/functionality/sidebars/" target="_blank">Doc1️⃣📄✅</a>
             <a href="https://developer.wordpress.org/reference/functions/dynamic_sidebar/" target="_blank">Doc 2️⃣📄✅</a>
             <p>El sidebar es la seccion donde se pueden arrastrar, los widgets, en esta seccion vamos a ver como implementarlo de forma dinamica</p>
             <ol>
               <li>Primero se debe crear un nuevo archivo sidebar.php</li>
-              <li>Vamos al single.php y cortamos los div hijos o sidebar y dejamos unicamente el div contenedor padre, porque este es el que
-                hace responsive el sidebar
+              <li>
+              Vamos al single.php y cortamos los div hijos o sidebar que estan dentro del comentario aside.
+               y dejamos unicamente el div contenedor padre, porque este es el que hace responsive el sidebar
               </li>
               <li>Pegamos los widgets cortados en el sidebar.php, borramos los demas y dejamos solo 1 que sera el modelo</li>
               <li>De forma dinamica llamamos al archivo sidebar.php usando el template tag get_sidebar() dentro del contenedor padre dejado en single.php</li>
               <li>Vamos a hacer que el archivo sidebar.php funcione de forma dinamica, para ello debemos agregar el sidebar al archivo function.php</li>
               <li>En el function.php agregamos el comentario agregando sidebar,justo debajo de todo el codigo ya creado, esto  para identificar que hace  este bloque de codigo </li>
-              <li>Vamos a la documentacion en el apartado sidebar y copiamos el ejemplo</li>
+              <li>Vamos a la documentacion 1 en el apartado sidebar y copiamos el segundo ejemplo</li>
               <li>Pegamos el ejemplo copiado debajo de los comentarios</li>
+<pre class="bg-dark text-light p-3 rounded">
+add_action( 'widgets_init', 'my_register_sidebars' );// registra el nuevo sidebar
+function my_register_sidebars() {
+    /* Register the 'primary' sidebar. */
 
+    register_sidebar(
+      array(
+        'id'            => 'primary',// se puede cambiar
+        'name'          => __( 'Primary Sidebar' ), // se puede cambiar
+        'description'   => __( 'A short description of the sidebar.' ),// se puede cambiar
+        'before_widget' => 'Tag HTML apertura contenedor del sidebar con  id="%1$s" class="widget %2$s">>',
+        'after_widget'  => 'Tag HTML de cierre contenedor ppal',
+        'before_title'  => 'Tag HTML apertura encierra el titulo',
+        'after_title'   => 'Tag HTML cierre para titulo',
+    )
+);
+/* Repeat register_sidebar() code for additional sidebars. */
+}
+</pre>
+
+                <li>Las clases y id con carateres extraños que vienen en el ejemplo, son valores dinamicos para wordpress los dejamos tal cual</li>
+                <li>En los itemas del array con nombre before y after se agregan las etiquetas html que 
+                  cubren el contenedor ppal o titulo segun corresponda con sus respectivas clases y id, segun ejemplo estatico</li>
+                <li>Con este script ya estamos generando el widget de forma dinamica</li>
+                <li>Para llamar al sidebar de function.php necesitamos usar la funcion dinamic_sidebar() en sidebar.php</li>
+                <li>Para ello vamos a la Documentacion 2 y copiamos el primer ejemplo de los del final de la página</li>
+<pre class="bg-dark text-light p-3 rounded">
+ if ( is_active_sidebar( 'left-sidebar' ) ) : // si existe sidebar lo agrega
+
+         dynamic_sidebar( 'left-sidebar' );
+endif; 
+</pre>
+                <li>Pegamos el script en el sidebar.php y borramos los ul y ejemplo estatico</li>
+                <li>El valor left-sidebar se debe remplazar por el nombre del id en function.php</li>
             </ol>
           </diV>
 

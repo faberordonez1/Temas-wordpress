@@ -23,19 +23,7 @@
 
                 <!-- Aside -->
                 <div class="col-12 col-md-3">
-                    <div class="my-3">
-                        <h3>Lorem ipsum</h3>
-                        <img src="https://loremflickr.com/940/788" class="img-fluid">
-                    </div>
-                    <div class="my-3">
-                        <h3>Lorem ipsum</h3>
-                        <img src="https://loremflickr.com/940/788" class="img-fluid">
-                    </div>
-                    <div class="my-3">
-                        <h3>Lorem ipsum</h3>
-                        <img src="https://loremflickr.com/940/788" class="img-fluid">
-                    </div>
-
+                    get_sidebar();
                 </div>
                 <!-- Fin Aside -->
         </div>
